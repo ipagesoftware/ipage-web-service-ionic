@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ipage WebService CEP
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3>Ipage WebService CEP Exemplo em Ionic 3</h3>
+    <h4>Digite o CEP: </h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+ <!--          <ion-label color="primary">CEP: </ion-label> -->
+          <ion-searchbar type="tel" [(ngModel)]="cep"
+          (ionInput)="getEndereco()"></ion-searchbar>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+          <ion-list >
+            <ion-item *ngIf="endereco.cep">
+              CEP:<br> {{ endereco.cep}}
+            </ion-item >
+            <ion-item *ngIf="endereco.logradouro">
+              Logradouro:<br> {{ endereco.logradouro}}
+            </ion-item >
+            <ion-item *ngIf="endereco.logradouro2">
+                  Logradouro2:<br> {{ endereco.logradouro2}}
+              </ion-item >
+              <ion-item *ngIf="endereco.tp_logradouro">
+                Tipo Logradouro:<br> {{ endereco.tp_logradouro}}
+              </ion-item >
+              <ion-item *ngIf="endereco.complemento">
+                Complemento:<br> {{ endereco.complemento}}
+              </ion-item >
+              <ion-item *ngIf="endereco.bairro">
+                Bairro:<br> {{ endereco.bairro }}
+              </ion-item >
+              <ion-item *ngIf="endereco.cidade">
+                Cidade:<br> {{ endereco.cidade }}
+              </ion-item>
+              <ion-item *ngIf="endereco.uf">
+                UF:<br> {{ endereco.uf}}
+              </ion-item >
+              <ion-item *ngIf="endereco.ibge">
+                IBGE:<br> {{ endereco.ibge }}
+              </ion-item>
+              <ion-item *ngIf="endereco.gia">
+                GIA:<br> {{ endereco.gia }}
+              </ion-item>
+              <ion-item *ngIf="endereco.ddd">
+                DDD:<br> {{ endereco.ddd }}
+              </ion-item>
+              <ion-item *ngIf="endereco.distancia_da_capital">
+                Distância da Capital:<br> {{ endereco.distancia_da_capital }}
+              </ion-item>
+              <ion-item *ngIf="endereco.faixa_de_cep">
+                Faixa de Cep:<br> {{ endereco.faixa_de_cep }}
+              </ion-item>
+              <ion-item *ngIf="endereco.gentilico">
+                Gentilico:<br> {{ endereco.gentilico }}
+              </ion-item>
+              <ion-item *ngIf="endereco.latitude">
+                Latitude:<br> {{ endereco.latitude }}
+              </ion-item>
+              <ion-item *ngIf="endereco.longitude">
+                Longitude:<br> {{ endereco.longitude }}
+              </ion-item>
+              <ion-item *ngIf="endereco.gia">
+                GIA:<br> {{ endereco.gia }}
+              </ion-item>
+              <ion-item *ngIf="endereco.mesorregiao">
+                Mesor Região:<br> {{ endereco.mesorregiao }}
+              </ion-item>
+              <ion-item *ngIf="endereco.microrregiao">
+                Micror Região:<br> {{ endereco.microrregiao }}
+              </ion-item>
+              <ion-item *ngIf="endereco.regiao">
+                Região:<br> {{ endereco.regiao }}
+              </ion-item>
+              <ion-item *ngIf="endereco.tempo_percurso_veiculo">
+                Tempo Percurso Veículo:<br> {{ endereco.tempo_percurso_veiculo }}
+              </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>    
+  </ion-content>
